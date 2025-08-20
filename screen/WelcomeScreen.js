@@ -8,13 +8,11 @@ const { width, height } = Dimensions.get("window");
 function WelcomeScreen(props) {
   return (
     <GradientScreen>
-      <Image style={styles.image4} source={require("../assets/P1.png")} />
-      <Image style={styles.image5} source={require("../assets/P4.png")} />
-      {/* <View style={styles.imageContainer}> */}
       <Image style={styles.image1} source={require("../assets/P1.png")} />
       <Image style={styles.image2} source={require("../assets/P5.png")} />
       <Image style={styles.image3} source={require("../assets/P3.png")} />
-      {/* </View> */}
+      <Image style={styles.image4} source={require("../assets/P1.png")} />
+      <Image style={styles.image5} source={require("../assets/P4.png")} />
 
       <View style={styles.textContainer}>
         <Text style={styles.text}>
@@ -40,20 +38,14 @@ function WelcomeScreen(props) {
 
 export default WelcomeScreen;
 const styles = StyleSheet.create({
-  // imageContainer: {
-  //   marginTop: 10,
-  //   // flexDirection:"row",
-  //   padding: 0,
-  // },
   image1: {
     height: "21.4%",
     width: "54.7%",
-    // resizeMode: "contain",
   },
   image2: {
     height: "19.2%",
     width: "30.9%",
-    // resizeMode:"contain",
+
     position: "absolute",
     top: "4.07%",
     left: "61.6%",
@@ -62,8 +54,7 @@ const styles = StyleSheet.create({
   image3: {
     height: "16.07%",
     width: "45.2%",
-    // resizeMode:"contain",
-    // backgroundColor:"green",
+
     left: "23.8%",
     transform: [{ rotate: "30deg" }],
   },
@@ -72,7 +63,7 @@ const styles = StyleSheet.create({
     width: "45.2%",
     position: "absolute",
     resizeMode: "contain",
-    // backgroundColor:"green",
+
     right: 0,
     bottom: "24.65%",
     transform: [{ rotate: "60deg" }],
@@ -81,14 +72,14 @@ const styles = StyleSheet.create({
     height: "16.07%",
     width: "45.2%",
     position: "absolute",
-    // backgroundColor:"green",
+
     left: "1.19%",
     bottom: "6.97%",
   },
   textContainer: {
     padding: 20,
-    position:"absolute",
-    top:"41.2%",
+    position: "absolute",
+    top: "41.2%",
   },
   text: {
     fontSize: 38,
@@ -105,11 +96,10 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
   },
   buttonContainer: {
-    position:"absolute",
+    position: "absolute",
     alignItems: "center",
     padding: 10,
     width: "100%",
-    bottom:"16.08%",
-    // backgroundColor:"white"
+    bottom: "16.08%",
   },
 });
