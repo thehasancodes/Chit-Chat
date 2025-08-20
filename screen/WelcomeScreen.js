@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
     width: "30.9%",
     // resizeMode:"contain",
     position: "absolute",
-    top: 38,
-    left: 259,
+    top: "4.07%",
+    left: "61.6%",
     transform: [{ rotate: "300deg" }],
   },
   image3: {
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     width: "45.2%",
     // resizeMode:"contain",
     // backgroundColor:"green",
-    left: 100,
+    left: "23.8%",
     transform: [{ rotate: "30deg" }],
   },
   image4: {
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     // backgroundColor:"green",
     right: 0,
-    bottom: 230,
+    bottom: "24.65%",
     transform: [{ rotate: "60deg" }],
   },
   image5: {
@@ -82,8 +82,8 @@ const styles = StyleSheet.create({
     width: "45.2%",
     position: "absolute",
     // backgroundColor:"green",
-    left: 5,
-    bottom: 65,
+    left: "1.19%",
+    bottom: "6.97%",
   },
   textContainer: {
     padding: 20,
