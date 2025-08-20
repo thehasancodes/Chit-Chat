@@ -8,13 +8,11 @@ const { width, height } = Dimensions.get("window");
 function WelcomeScreen(props) {
   return (
     <GradientScreen>
-      <Image style={styles.image4} source={require("../assets/P1.png")} />
-      <Image style={styles.image5} source={require("../assets/P4.png")} />
-      {/* <View style={styles.imageContainer}> */}
       <Image style={styles.image1} source={require("../assets/P1.png")} />
       <Image style={styles.image2} source={require("../assets/P5.png")} />
       <Image style={styles.image3} source={require("../assets/P3.png")} />
-      {/* </View> */}
+      <Image style={styles.image4} source={require("../assets/P1.png")} />
+      <Image style={styles.image5} source={require("../assets/P4.png")} />
 
       <View style={styles.textContainer}>
         <Text style={styles.text}>
