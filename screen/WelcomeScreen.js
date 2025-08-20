@@ -87,6 +87,8 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     padding: 20,
+    position:"absolute",
+    top:"41.2%",
   },
   text: {
     fontSize: 38,
@@ -103,10 +105,11 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
   },
   buttonContainer: {
-    marginTop: 40,
+    position:"absolute",
     alignItems: "center",
     padding: 10,
     width: "100%",
+    bottom:"16.08%",
     // backgroundColor:"white"
   },
 });
