@@ -1,9 +1,122 @@
-import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
-import GradientScreen from "../components/GradientScreen";
+import React from 'react';
+import GradientScreen from '../components/GradientScreen';
+import {StyleSheet,Image, View,Text, TouchableOpacity} from 'react-native'
+import AppButton from '../components/AppButton';
+import AppForm from '../components/AppForm';
+import AppFormField from '../components/AppFormField'
+import * as Yup from 'yup';
+import colors from '../config/colors';
+
+const validationSchema = Yup.object().shape({
+    email: Yup.string().required().email().label("Email"),
+    password: Yup.string().required().min(4).label("Password")
+    // password: Yup.string().required().min(4).label("Password")
+});
 
 function SignupScreen(props) {
-  return <GradientScreen></GradientScreen>;
+  return (
+    <GradientScreen>
+      <Image style={styles.image2} source={require("../assets/P5.png")} />
+      <Image style={styles.image3} source={require("../assets/P3.png")} />
+      <Image style={styles.image4} source={require("../assets/P1.png")} />
+      <Image style={styles.image5} source={require("../assets/P4.png")} />
+
+      <AppForm 
+                initialValues={{email: '' , password:''}}
+                onSubmit={values => console.log(values)}
+                validationSchema={validationSchema}
+                >
+            <View style={styles.content}>
+              <AppFormField
+                  autoCapitalize="none"
+                  autoCorrect={false}
+                  icon="account"
+                  secureTextEntry={true}
+                  name="username"
+                  textContentType="username"
+                  placeholder="username"
+                  keyboardType="username"
+                  
+          
+              />
+              <AppFormField 
+                autoCapitalize="none"
+                autoCorrect={false}
+                icon="email"
+                keyboardType="email-address"
+                name="email"
+                textContentType="emailAddress"
+                placeholder="email"
+            />
+    
+            <AppFormField
+                autoCapitalize="none"
+                autoCorrect={false}
+                icon="lock"
+                secureTextEntry={true}
+                name="password"
+                textContentType="password"
+                placeholder="password"
+
+            />
+            </View>
+            <View style={styles.login}>
+            <AppButton 
+            
+            title="sign up" color="button"/>
+            </View>
+            </AppForm>
+    </GradientScreen>
+  );
 }
 
 export default SignupScreen;
+const styles = StyleSheet.create({
+      image2: {
+    height: "19.2%",
+    width: "30.9%",
+
+    position: "absolute",
+    top: "7.07%",
+    left: "61.6%",
+    transform: [{ rotate: "300deg" }],
+  },
+  image3: {
+    height: "16.07%",
+    width: "45.2%",
+    top:"15.5%",
+    left: "2.8%",
+    transform: [{ rotate: "30deg" }],
+  },
+  image4: {
+    height: "21.4%",
+    width: "45.2%",
+    position: "absolute",
+    resizeMode: "contain",
+
+    right: 0,
+    bottom: "24.65%",
+    transform: [{ rotate: "60deg" }],
+  },
+  image5: {
+    height: "16.07%",
+    width: "45.2%",
+    position: "absolute",
+
+    left: "1.19%",
+    bottom: "6.97%",
+  },
+  content:{
+    position:"absolute",
+    width:"100%",
+    bottom:290,
+    padding:10,
+  },
+  login:{
+    position:"absolute",
+    width:"100%",
+    bottom:200,
+    padding:10,
+  },
+  
+})
